@@ -435,7 +435,7 @@ actually the increment function, not the identify function. So passing it a
 `bool` or `string` or some complicated data structure is not safe; the only data
 `+` can safely manipulate are integers.
 
-Function `id''` is maybe less obviously wrong. If follow the chain of definition
+Function `id''` is maybe less obviously wrong. If we follow the chain of definition
 backwards, we discover that `id''` is really going to be just `fun x -> x`.
 There's nothing wrong with that code as the implementation of `id''`: it's
 guaranteed to return an output of the same type as its input, because it *does*
@@ -466,7 +466,7 @@ let x = e [in e']
 ```
 
 and that OCaml infers `x` has a type `t` that includes some type variables `'a`,
-'`b`, etc. Then we are permitted to instantiate those type variables. We can do
+`'b`, etc. Then we are permitted to instantiate those type variables. We can do
 that by applying the function to arguments that reveal what the type
 instantiations should be (as in `id 5`) or by a type annotation (as in
 `id_int'`), among other ways. But we have to be consistent with the
